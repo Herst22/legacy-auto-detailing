@@ -1,4 +1,36 @@
+"use client";
+
+import emailjs from "@emailjs/browser";
+import { useRef } from "react";
+const SERVICE_ID = "service_5o3pgaj";
+const TEMPLATE_ID = "template_fxuz0s5";
+const PUBLIC_KEY = "bwUC94xuN6Y_G4oAC";
 export default function Home() {
+  const form = useRef<HTMLFormElement>(null);
+
+const sendEmail = (e: React.FormEvent<HTMLFormElement>) => {
+  e.preventDefault();
+
+  if (!form.current) return;
+
+  emailjs
+    .sendForm(
+      SERVICE_ID,
+      TEMPLATE_ID,
+      form.current,
+      PUBLIC_KEY
+    )
+    .then(() => {
+      alert("Thank you! Your quote request has been sent.");
+      form.current?.reset();
+    })
+    .catch((error) => {
+      console.log("Status:", error.status);
+      console.log("Text:", error.text);
+      console.log(error);
+      alert("Something went wrong. Please try again.");
+    });
+};
   return (
     <main className="bg-black text-white">
       <nav className="flex items-center justify-between px-8 py-6 border-b border-zinc-800">
@@ -7,19 +39,20 @@ export default function Home() {
   </h1>
 
   <div className="hidden md:flex gap-8 text-gray-300">
-    <a href="#">Home</a>
-    <a href="#">Services</a>
-    <a href="#">Gallery</a>
-    <a href="#">About</a>
-    <a href="#">Contact</a>
+    <a href="#home">Home</a>
+    <a href="#services">Services</a>
+    <a href="#gallery">Gallery</a>
+    <a href="#about">About</a>
+    <a href="#contact">Contact</a>
   </div>
 
   <button className="bg-yellow-400 text-black px-5 py-2 rounded-lg font-bold hover:bg-yellow-300 transition">
-    Get Quote
   </button>
 </nav>
 
-<section className="min-h-[85vh] flex items-center justify-center px-6">
+<section 
+id="home"
+className="min-h-[85vh] flex items-center justify-center px-6">
   <div className="text-center max-w-4xl">
     <h2 className="text-6xl md:text-8xl font-extrabold text-yellow-400">
       Protect Your Investment
@@ -31,17 +64,26 @@ export default function Home() {
     </p>
 
     <div className="mt-10 flex flex-col sm:flex-row justify-center gap-4">
-      <button className="bg-yellow-400 text-black font-bold px-8 py-4 rounded-xl hover:bg-yellow-300 transition">
+   <a
+      href="#contact"
+      className="bg-yellow-400 text-black font-bold px-8 py-4 rounded-xl hover:bg-yellow-300 transition"
+      >
         Get a Free Quote
-      </button>
+      </a>
 
-      <button className="border border-yellow-400 text-yellow-400 font-bold px-8 py-4 rounded-xl hover:bg-yellow-400 hover:text-black transition">
+<a
+      href="tel:+15017332375"
+      className="border border-yellow-400 text-yellow-400 font-bold px-8 py-4 rounded-xl hover:bg-yellow-400 hover:text-black transition"
+      >
         Call Now
-      </button>
+      </a>
+
     </div>
   </div>
 </section>
-<section id="services" className="bg-zinc-900 py-24 px-6 text-white">
+<section 
+id="services"
+ className="bg-zinc-900 py-24 px-6 text-white">
   <div className="max-w-7xl mx-auto">
 
     <h2 className="text-5xl font-bold text-center text-yellow-400">
@@ -100,7 +142,9 @@ export default function Home() {
 
   </div>
 </section>
-<section id="gallery" className="bg-black py-24 px-6 text-white">
+<section 
+id="gallery" 
+className="bg-black py-24 px-6 text-white">
   <div className="max-w-7xl mx-auto">
 
     <h2 className="text-5xl font-bold text-center text-yellow-400">
@@ -135,7 +179,9 @@ export default function Home() {
 
   </div>
 </section>
-<section className="py-24 bg-black px-6">
+<section
+id="about"
+ className="py-24 bg-black px-6">
   <div className="max-w-6xl mx-auto">
 
     <h2 className="text-5xl font-bold text-yellow-400 text-center">
@@ -193,7 +239,7 @@ export default function Home() {
     </div>
   </div>
 </section>
-<section id="contact" className="py-24 bg-zinc-950 px-6">
+<section id="contact-info" className="py-24 bg-zinc-950 px-6">
   <div className="max-w-4xl mx-auto text-center">
 
     <h2 className="text-5xl font-bold text-yellow-400">
@@ -328,7 +374,9 @@ export default function Home() {
   </div>
 </section>
 
-<section className="bg-zinc-950 py-24 px-6">
+<section 
+id="contact"
+className="bg-zinc-950 py-24 px-6">
   <div className="max-w-5xl mx-auto">
 
     <h2 className="text-5xl font-bold text-center text-yellow-400">
@@ -339,27 +387,34 @@ export default function Home() {
       Fill out the form below and we'll contact you as soon as possible with a customized quote.
     </p>
 
-    <form className="grid md:grid-cols-2 gap-8">
+    <form
+  ref={form}
+  onSubmit={sendEmail}
+  className="grid md:grid-cols-2 gap-8"
+>
 
   <input
     type="text"
+    name= "name"
     placeholder="Full Name"
     className="bg-zinc-900 border border-yellow-500 rounded-lg p-4 text-white"
   />
 
   <input
     type="tel"
+    name="phone"
     placeholder="Phone Number"
     className="bg-zinc-900 border border-yellow-500 rounded-lg p-4 text-white"
   />
 
   <input
     type="email"
+    name="email"
     placeholder="Email Address"
     className="bg-zinc-900 border border-yellow-500 rounded-lg p-4 text-white"
   />
 
-  <select className="bg-zinc-900 border border-yellow-500 rounded-lg p-4 text-white">
+  <select name="service" className="bg-zinc-900 border border-yellow-500 rounded-lg p-4 text-white">
     <option>Select Package</option>
     <option>Legacy Essential</option>
     <option>Legacy Premium</option>
@@ -369,6 +424,7 @@ export default function Home() {
 
   <input
     type="date"
+    name="date"
     className="bg-zinc-900 border border-yellow-500 rounded-lg p-4 text-white"
   />
 
@@ -377,15 +433,20 @@ export default function Home() {
     placeholder="Vehicle Make & Model"
     className="bg-zinc-900 border border-yellow-500 rounded-lg p-4 text-white"
   />
-<select className="bg-zinc-900 border border-yellow-500 rounded-lg p-4 text-white">
-  <option>Vehicle Type</option>
+<select 
+  name="vehicle_type"
+  className="bg-zinc-900 border border-yellow-500 rounded-lg p-4 text-white"
+  >
+  <option>Select Vehicle Type</option>
   <option>Car</option>
   <option>Truck</option>
   <option>SUV</option>
   <option>Van</option>
   <option>Motorcycle</option>
 </select>
-<select className="bg-zinc-900 border border-yellow-500 rounded-lg p-4 text-white">
+<select 
+name="referral"
+className="bg-zinc-900 border border-yellow-500 rounded-lg p-4 text-white">
   <option>How did you hear about us?</option>
   <option>Google</option>
   <option>Facebook</option>
@@ -397,17 +458,20 @@ export default function Home() {
 </select>
 <input
   type="text"
+  name="address"
   placeholder="Preferred Service Address"
   className="md:col-span-2 bg-zinc-900 border border-yellow-500 rounded-lg p-4 text-white"
 />
 
   <textarea
+  name="message"
     placeholder="Tell us about your vehicle or any special requests..."
     rows={5}
     className="md:col-span-2 bg-zinc-900 border border-yellow-500 rounded-lg p-4 text-white"
   ></textarea>
 
   <button
+  type="submit"
     className="md:col-span-2 bg-yellow-400 text-black font-bold py-4 rounded-lg hover:bg-yellow-300 transition"
   >
     Request Free Quote
