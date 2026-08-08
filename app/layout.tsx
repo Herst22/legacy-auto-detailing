@@ -1,30 +1,76 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import { Inter } from "next/font/google";
 import "./globals.css";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
+const inter = Inter({
   subsets: ["latin"],
+  display: "swap",
 });
 
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
-});
+export const metadata: Metadata = {
+  metadataBase: new URL("https://legacyautodetailingar.com"),
 
-export const metadata = {
-  title: "Legacy Auto Detailing | Premium Mobile Detailing in Central Arkansas",
+  title: {
+    default: "Legacy Auto Detailing LLC | Premium Auto Detailing",
+    template: "%s | Legacy Auto Detailing LLC",
+  },
+
   description:
-    "Professional mobile auto detailing serving Rose Bud and Central Arkansas. Interior detailing, exterior detailing, ceramic coatings, and premium vehicle protection.",
+    "Premium auto detailing in Arkansas offering professional interior and exterior detailing, monthly memberships, and premium vehicle care.",
+
+  keywords: [
+    "Legacy Auto Detailing",
+    "Auto Detailing Arkansas",
+    "Mobile Auto Detailing",
+    "Car Detailing",
+    "Interior Detailing",
+    "Exterior Detailing",
+    "Premium Auto Detailing",
+    "Arkansas Auto Detailer",
+  ],
+
+  authors: [{ name: "Legacy Auto Detailing LLC" }],
+  creator: "Legacy Auto Detailing LLC",
+  publisher: "Legacy Auto Detailing LLC",
+
+  applicationName: "Legacy Auto Detailing LLC",
+  category: "Automotive",
+
+  robots: {
+    index: true,
+    follow: true,
+  },
+
+  openGraph: {
+    title: "Legacy Auto Detailing LLC",
+    description:
+      "Premium auto detailing with professional results, monthly memberships, and 20% discounts for military and first responders.",
+    url: "https://legacyautodetailingar.com",
+    siteName: "Legacy Auto Detailing LLC",
+    locale: "en_US",
+    type: "website",
+  },
+
+  twitter: {
+    card: "summary_large_image",
+    title: "Legacy Auto Detailing LLC",
+    description:
+      "Premium automotive detailing built around quality, protection, and exceptional care.",
+  },
+
+  icons: {
+    icon: "/favicon.ico",
+  },
 };
 
-export default function RootLayout({ children }: LayoutProps<"/">) {
+export default function RootLayout({
+  children,
+}: Readonly<{
+  children: React.ReactNode;
+}>) {
   return (
-    <html
-      lang="en"
-      className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
-    >
-      <body className="min-h-full flex flex-col">{children}</body>
+    <html lang="en">
+      <body className={inter.className}>{children}</body>
     </html>
   );
 }
