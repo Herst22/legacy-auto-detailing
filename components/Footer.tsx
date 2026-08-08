@@ -4,7 +4,7 @@ export default function Footer() {
       <div className="footer-container">
         <div className="footer-brand">
           <img
-            src="/images/legacy-crest.png"
+            src="/assets/legacy-crest.png"
             alt="Legacy Auto Detailing Crest"
             style={{
               width: "150px",

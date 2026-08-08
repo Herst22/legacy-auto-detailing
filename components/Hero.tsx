@@ -5,7 +5,7 @@ export default function Hero() {
 
       <div className="hero-content">
         <img
-  src="/images/legacy-crest.png"
+  src="/assets/legacy-crest.png"
   alt="Legacy Auto Detailing Crest"
   style={{
     width: "220px",

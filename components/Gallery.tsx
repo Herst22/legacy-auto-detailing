@@ -15,15 +15,15 @@ export default function Gallery() {
 
         <div className="gallery-grid">
           <div className="gallery-card">
-            <img src="/images/truck.jpg" alt="Detailed truck" />
+            <img src="/assets/truck.jpg" alt="Detailed truck" />
           </div>
 
           <div className="gallery-card">
-            <img src="/images/suv.jpg" alt="Detailed SUV" />
+            <img src="/assets/suv.jpg" alt="Detailed SUV" />
           </div>
 
           <div className="gallery-card">
-            <img src="/images/camaro.jpg" alt="Detailed Camaro" />
+            <img src="/assets/camaro.jpg" alt="Detailed Camaro" />
           </div>
         </div>
       </div>
