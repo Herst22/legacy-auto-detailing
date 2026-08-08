@@ -27,9 +27,14 @@ export default function Navbar() {
           <a href="#gallery">Gallery</a>
           <a href="#contact">Contact</a>
 
-          <a href="#contact" className="nav-book-button">
-            Book Now
-          </a>
+          <a
+  href="https://app.squareup.com/appointments/book/na91kgmns7xlpf/L2D8MGPVDVC20/start"
+  target="_blank"
+  rel="noopener noreferrer"
+  className="nav-book-button"
+>
+  Book Now
+</a>
         </nav>
 
         <button
@@ -72,12 +77,14 @@ export default function Navbar() {
         </a>
 
         <a
-          href="#contact"
-          className="mobile-book-button"
-          onClick={closeMenu}
-        >
-          Book Now
-        </a>
+  href="https://app.squareup.com/appointments/book/na91kgmns7xlpf/L2D8MGPVDVC20/start"
+  target="_blank"
+  rel="noopener noreferrer"
+  className="mobile-book-button"
+  onClick={closeMenu}
+>
+  Book Now
+</a>
       </nav>
     </header>
   );

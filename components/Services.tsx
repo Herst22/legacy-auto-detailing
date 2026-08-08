@@ -26,7 +26,7 @@ export default function Services() {
               vehicle&apos;s finish.
             </p>
 
-            <a href="#contact" className="service-link">
+            <a href="https://app.squareup.com/appointments/book/na91kgmns7xlpf/L2D8MGPVDVC20/start" target="_blank" rel="noopener noreferrer" className="service-link">
               Request Service
             </a>
           </article>
@@ -42,7 +42,7 @@ export default function Services() {
               cleaning.
             </p>
 
-            <a href="#contact" className="service-link">
+            <a href="https://app.squareup.com/appointments/book/na91kgmns7xlpf/L2D8MGPVDVC20/start" target="_blank" rel="noopener noreferrer" className="service-link">
               Request Service
             </a>
           </article>
@@ -57,7 +57,7 @@ export default function Services() {
               their entire vehicle refreshed through one premium service.
             </p>
 
-            <a href="#contact" className="service-link">
+            <a href="https://app.squareup.com/appointments/book/na91kgmns7xlpf/L2D8MGPVDVC20/start" target="_blank" rel="noopener noreferrer" className="service-link">
               Request Service
             </a>
           </article>

@@ -28,9 +28,14 @@ export default function Hero() {
         </p>
 
         <div className="hero-buttons">
-          <a href="#contact" className="hero-primary-button">
-            Book Your Detail
-          </a>
+          <a
+  href="https://app.squareup.com/appointments/book/na91kgmns7xlpf/L2D8MGPVDVC20/start"
+  target="_blank"
+  rel="noopener noreferrer"
+  className="hero-primary-button"
+>
+  Book Your Detail
+</a>
 
           <a href="#services" className="hero-secondary-button">
             View Services
