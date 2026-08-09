@@ -2,6 +2,10 @@ export default function Services() {
   const bookingLink =
     "https://app.squareup.com/appointments/book/na91kgmns7xlpf/L2D8MGPVDVC20/start";
 
+  const essentialMembershipLink = "https://square.link/u/7rs6Xpsj";
+  const premierMembershipLink = "https://square.link/u/pBG5bho0";
+  const blackLabelMembershipLink = "https://square.link/u/FIM3ZMUX";
+
   return (
     <section id="services" className="services-section">
       <div className="services-container">
@@ -124,7 +128,12 @@ export default function Services() {
                 <li>Priority scheduling</li>
               </ul>
 
-              <a href="#contact" className="membership-button">
+              <a
+                href={essentialMembershipLink}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="membership-button"
+              >
                 Choose Essential
               </a>
             </article>
@@ -150,7 +159,12 @@ export default function Services() {
                 <li>10% off additional detailing services</li>
               </ul>
 
-              <a href="#contact" className="membership-button">
+              <a
+                href={premierMembershipLink}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="membership-button"
+              >
                 Choose Premier
               </a>
             </article>
@@ -175,7 +189,12 @@ export default function Services() {
                 <li>1 complimentary full-detail upgrade per year</li>
               </ul>
 
-              <a href="#contact" className="membership-button">
+              <a
+                href={blackLabelMembershipLink}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="membership-button"
+              >
                 Choose Black Label
               </a>
             </article>
