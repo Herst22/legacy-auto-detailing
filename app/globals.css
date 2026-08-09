@@ -1287,3 +1287,357 @@ section {
     text-align: center;
   }
 }
+
+/* =========================================================
+   FINAL SERVICES + MEMBERSHIP ALIGNMENT
+========================================================= */
+
+.section-heading,
+.membership-heading {
+  width: 100%;
+  max-width: 760px;
+  margin-left: 0;
+  margin-right: 0;
+  text-align: left;
+}
+
+.section-heading h2,
+.section-heading p,
+.membership-heading h2,
+.membership-heading p {
+  max-width: 760px;
+  margin-left: 0;
+  margin-right: 0;
+  text-align: left;
+  word-spacing: normal;
+  letter-spacing: normal;
+}
+
+.services-grid,
+.membership-grid {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  align-items: stretch;
+  gap: 1.25rem;
+}
+
+.service-card,
+.membership-card {
+  width: 100%;
+  min-width: 0;
+  height: 100%;
+  text-align: left;
+}
+
+.service-card {
+  min-height: 520px;
+  display: flex;
+  flex-direction: column;
+}
+
+.service-card h3,
+.service-card p,
+.service-card ul,
+.membership-card h3,
+.membership-card p,
+.membership-card ul {
+  width: 100%;
+  max-width: none;
+  margin-left: 0;
+  margin-right: 0;
+  text-align: left;
+}
+
+.service-card .membership-features,
+.membership-card .membership-features {
+  padding-left: 1.25rem;
+}
+
+.service-link {
+  position: static;
+  display: inline-flex;
+  width: fit-content;
+  margin-top: auto;
+  padding-top: 1.5rem;
+}
+
+.membership-card.featured {
+  transform: none;
+}
+
+.membership-button {
+  width: 100%;
+}
+
+@media (max-width: 900px) {
+  .services-grid,
+  .membership-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .service-card {
+    min-height: auto;
+  }
+}
+/* =========================================================
+   GUARANTEED THREE-CARD ROW LAYOUT
+========================================================= */
+
+.services-grid,
+.membership-grid {
+  display: flex !important;
+  flex-direction: row !important;
+  flex-wrap: nowrap !important;
+  align-items: stretch !important;
+  justify-content: flex-start !important;
+  gap: 1.25rem !important;
+}
+
+.services-grid > .service-card,
+.membership-grid > .membership-card {
+  flex: 1 1 0 !important;
+  width: 0 !important;
+  min-width: 0 !important;
+  margin: 0 !important;
+  align-self: stretch !important;
+}
+
+.service-card,
+.membership-card {
+  text-align: left !important;
+}
+
+.service-card h3,
+.service-card p,
+.service-card li,
+.membership-card h3,
+.membership-card p,
+.membership-card li {
+  text-align: left !important;
+  margin-left: 0 !important;
+  margin-right: 0 !important;
+}
+
+.service-card .membership-features,
+.membership-card .membership-features {
+  width: 100% !important;
+  padding-left: 1.25rem !important;
+}
+
+@media (max-width: 900px) {
+  .services-grid,
+  .membership-grid {
+    flex-direction: column !important;
+  }
+
+  .services-grid > .service-card,
+  .membership-grid > .membership-card {
+    width: 100% !important;
+    flex: none !important;
+  }
+}
+/* =========================================================
+   FINAL EQUAL HEIGHT + NORMAL TEXT SPACING FIX
+========================================================= */
+
+.section-heading,
+.membership-heading,
+.discount-content {
+  display: block !important;
+  width: 100% !important;
+  max-width: 760px !important;
+  margin-left: 0 !important;
+  margin-right: 0 !important;
+  text-align: left !important;
+}
+
+.section-description,
+.membership-heading p:last-child,
+.discount-content > p:not(.discount-eyebrow),
+.discount-content > small,
+.membership-note {
+  display: block !important;
+  width: 100% !important;
+  max-width: 760px !important;
+  margin-left: 0 !important;
+  margin-right: 0 !important;
+  text-align: left !important;
+  text-align-last: left !important;
+  word-spacing: 0 !important;
+  letter-spacing: normal !important;
+  white-space: normal !important;
+}
+
+.membership-note {
+  max-width: 900px !important;
+  margin-top: 1.6rem !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+  text-align: center !important;
+  text-align-last: center !important;
+}
+
+.services-grid,
+.membership-grid {
+  display: flex !important;
+  flex-direction: row !important;
+  flex-wrap: nowrap !important;
+  align-items: stretch !important;
+  gap: 1.25rem !important;
+}
+
+.services-grid > .service-card,
+.membership-grid > .membership-card {
+  flex: 1 1 0 !important;
+  width: 0 !important;
+  min-width: 0 !important;
+  height: auto !important;
+  margin: 0 !important;
+  align-self: stretch !important;
+}
+
+.service-card,
+.membership-card {
+  display: flex !important;
+  flex-direction: column !important;
+  height: auto !important;
+  text-align: left !important;
+}
+
+.service-card h3,
+.membership-card h3 {
+  width: 100% !important;
+  margin-left: 0 !important;
+  margin-right: 0 !important;
+  text-align: left !important;
+  text-align-last: left !important;
+  word-spacing: 0 !important;
+  letter-spacing: normal !important;
+}
+
+.service-card h3 {
+  min-height: 3.6rem !important;
+}
+
+.membership-card h3 {
+  min-height: 4rem !important;
+}
+
+.service-card > p:not(.service-number) {
+  width: 100% !important;
+  min-height: 10rem !important;
+  margin-left: 0 !important;
+  margin-right: 0 !important;
+  text-align: left !important;
+  text-align-last: left !important;
+  word-spacing: 0 !important;
+  letter-spacing: normal !important;
+  white-space: normal !important;
+}
+
+.service-card .membership-features,
+.membership-card .membership-features {
+  width: 100% !important;
+  margin-left: 0 !important;
+  margin-right: 0 !important;
+  padding-left: 1.25rem !important;
+  text-align: left !important;
+  word-spacing: 0 !important;
+  letter-spacing: normal !important;
+}
+
+.membership-card .membership-features:first-of-type {
+  min-height: 10rem !important;
+}
+
+.service-link,
+.membership-button {
+  margin-top: auto !important;
+}
+
+.membership-button {
+  min-height: 58px !important;
+  text-align: center !important;
+}
+
+.discount-banner {
+  align-items: center !important;
+}
+
+.discount-content h3,
+.discount-content p,
+.discount-content small {
+  text-align: left !important;
+  text-align-last: left !important;
+  word-spacing: 0 !important;
+  letter-spacing: normal !important;
+}
+
+@media (max-width: 900px) {
+  .services-grid,
+  .membership-grid {
+    flex-direction: column !important;
+  }
+
+  .services-grid > .service-card,
+  .membership-grid > .membership-card {
+    width: 100% !important;
+    flex: none !important;
+  }
+
+  .service-card h3,
+  .membership-card h3,
+  .service-card > p:not(.service-number),
+  .membership-card .membership-features:first-of-type {
+    min-height: auto !important;
+  }
+}
+/* =========================================================
+   REMOVE ALL STRETCHED SENTENCE SPACING
+========================================================= */
+
+.services-section p,
+.services-section small {
+  display: block !important;
+  text-align: left !important;
+  text-align-last: left !important;
+  text-justify: none !important;
+  word-spacing: normal !important;
+  letter-spacing: normal !important;
+  white-space: normal !important;
+  word-break: normal !important;
+  overflow-wrap: normal !important;
+}
+
+.section-description,
+.membership-heading p:last-child {
+  width: 100% !important;
+  max-width: 680px !important;
+  margin-top: 1.2rem !important;
+  margin-left: 0 !important;
+  margin-right: 0 !important;
+  line-height: 1.75 !important;
+}
+
+.discount-content > p:not(.discount-eyebrow),
+.discount-content > small {
+  width: 100% !important;
+  max-width: 680px !important;
+  margin-left: 0 !important;
+  margin-right: 0 !important;
+  text-align: left !important;
+  text-align-last: left !important;
+  text-justify: none !important;
+  word-spacing: normal !important;
+}
+
+.membership-note {
+  display: block !important;
+  max-width: 820px !important;
+  margin: 1.6rem auto 0 !important;
+  text-align: center !important;
+  text-align-last: center !important;
+  text-justify: none !important;
+  word-spacing: normal !important;
+}
