@@ -11,12 +11,13 @@ export const metadata: Metadata = {
   metadataBase: new URL("https://legacyautodetailingar.com"),
 
   title: {
-    default: "Legacy Auto Detailing LLC | Premium Auto Detailing",
+    default:
+      "Legacy Auto Detailing LLC | Premium Automotive Detailing",
     template: "%s | Legacy Auto Detailing LLC",
   },
 
   description:
-    "Premium auto detailing in Arkansas offering professional interior and exterior detailing, monthly memberships, and premium vehicle care.",
+    "Premium mobile automotive detailing in Arkansas offering interior and exterior detailing, monthly memberships, and professional vehicle care. Aircraft detailing services are coming soon.",
 
   keywords: [
     "Legacy Auto Detailing",
@@ -27,6 +28,9 @@ export const metadata: Metadata = {
     "Exterior Detailing",
     "Premium Auto Detailing",
     "Arkansas Auto Detailer",
+    "Aircraft Detailing Coming Soon",
+    "Aircraft Detailing Arkansas",
+    "Private Aircraft Detailing",
   ],
 
   authors: [{ name: "Legacy Auto Detailing LLC" }],
@@ -34,7 +38,7 @@ export const metadata: Metadata = {
   publisher: "Legacy Auto Detailing LLC",
 
   applicationName: "Legacy Auto Detailing LLC",
-  category: "Automotive",
+  category: "Automotive Detailing",
 
   robots: {
     index: true,
@@ -42,9 +46,10 @@ export const metadata: Metadata = {
   },
 
   openGraph: {
-    title: "Legacy Auto Detailing LLC",
+    title:
+      "Legacy Auto Detailing LLC | Automotive Care & Aircraft Detailing Coming Soon",
     description:
-      "Premium auto detailing with professional results, monthly memberships, and 20% discounts for military and first responders.",
+      "Premium mobile automotive detailing, monthly maintenance memberships, and future aircraft detailing services built around quality, precision, and protection.",
     url: "https://legacyautodetailingar.com",
     siteName: "Legacy Auto Detailing LLC",
     locale: "en_US",
@@ -53,9 +58,10 @@ export const metadata: Metadata = {
 
   twitter: {
     card: "summary_large_image",
-    title: "Legacy Auto Detailing LLC",
+    title:
+      "Legacy Auto Detailing LLC | Premium Automotive Detailing",
     description:
-      "Premium automotive detailing built around quality, protection, and exceptional care.",
+      "Premium automotive detailing built around quality, protection, and exceptional care. Aircraft detailing services are coming soon.",
   },
 
   icons: {

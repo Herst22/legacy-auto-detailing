@@ -30,7 +30,7 @@ export default function Contact() {
     <div className="contact-heading">
      <p className="section-eyebrow">CONTACT LEGACY</p>
 
-     <h2>Ready to Give Your Vehicle the Care It Deserves?</h2>
+     <h2>Ready to Protect What You Drive-or Fly?</h2>
 
      <p>
       Have a question, need help choosing a service, or ready to book your
@@ -106,7 +106,7 @@ export default function Contact() {
        />
       </div>
 <div className="contact-field">
-  <label htmlFor="vehicle">VEHICLE</label>
+  <label htmlFor="vehicle">VEHICLE OR AIRCRAFT</label>
   <input
     id="vehicle"
     name="vehicle"
@@ -135,7 +135,7 @@ export default function Contact() {
     id="address"
     name="address"
     type="text"
-    placeholder="Service address"
+    placeholder="Service address or airport location"
   />
 </div>
 
@@ -173,6 +173,9 @@ export default function Contact() {
         <option value="Interior Detail">Interior Detail</option>
         <option value="Full Detail">Full Detail</option>
         <option value="Membership">Monthly Membership</option>
+        <option value="Aircraft Detailing Interest List">
+ Aircraft Detailing — Interest List
+</option>
         <option value="Other">Other / Question</option>
        </select>
       </div>

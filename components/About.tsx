@@ -11,21 +11,24 @@ export default function About() {
         <div className="about-content">
           <p>
             Legacy Auto Detailing was created with one goal in mind: provide
-            premium vehicle care with the kind of attention to detail,
-            professionalism, and pride that customers can trust.
+            premium automotive care with the attention to detail,
+            professionalism, and pride our customers can trust.
           </p>
 
           <p>
-            We believe a vehicle is more than transportation. It represents
-            hard work, investment, memories, and pride of ownership. That is
-            why every service is approached with care, precision, and respect
-            for the vehicle in front of us.
+            We believe what you drive—or fly—represents more than
+            transportation. It represents hard work, investment, memories, and
+            pride of ownership. That is why every service is approached with
+            care, precision, and respect.
           </p>
 
           <p>
-            From routine maintenance to deeper restoration-focused detailing,
-            our mission is simple: preserve the finish, protect the investment,
-            and help every vehicle leave looking its absolute best.
+            From routine automotive maintenance to deeper
+            restoration-focused detailing, our mission is simple: preserve the
+            finish, protect the investment, and deliver an exceptional result.
+            As Legacy continues to grow, we are also developing specialized
+            aircraft detailing services built around aircraft-specific
+            products, procedures, training, and protection standards.
           </p>
         </div>
       </div>

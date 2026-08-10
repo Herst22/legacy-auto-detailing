@@ -1,4 +1,27 @@
 export default function Footer() {
+  const descriptionStyle = {
+    display: "block",
+    width: "100%",
+    maxWidth: "600px",
+    margin: "0 auto",
+    color: "#a8a8a8",
+    lineHeight: 1.7,
+    textAlign: "left" as const,
+    wordSpacing: "0px",
+    letterSpacing: "0px",
+    whiteSpace: "normal" as const,
+  };
+
+  const bottomTextStyle = {
+    display: "block",
+    color: "#a8a8a8",
+    lineHeight: 1.6,
+    textAlign: "left" as const,
+    wordSpacing: "0px",
+    letterSpacing: "0px",
+    whiteSpace: "normal" as const,
+  };
+
   return (
     <footer className="footer">
       <div className="footer-container">
@@ -17,10 +40,7 @@ export default function Footer() {
 
           <h2>LEGACY AUTO DETAILING</h2>
 
-          <p>
-            Premium mobile detailing built around quality, pride, and attention
-            to detail.
-          </p>
+          <div style={descriptionStyle}>Premium mobile automotive detailing built around quality, precision, pride, and respect for your investment. Aircraft detailing services are coming soon.</div>
         </div>
 
         <div className="footer-links">
@@ -34,12 +54,9 @@ export default function Footer() {
         </div>
 
         <div className="footer-bottom">
-          <p>
-            © {new Date().getFullYear()} Legacy Auto Detailing LLC. All rights
-            reserved.
-          </p>
+          <div style={bottomTextStyle}>© {new Date().getFullYear()} Legacy Auto Detailing LLC. All rights reserved.</div>
 
-          <p>Rose Bud, Arkansas & surrounding areas</p>
+          <div style={bottomTextStyle}>Rose Bud, Arkansas &amp; surrounding communities</div>
         </div>
       </div>
     </footer>

@@ -5,17 +5,20 @@ export default function Hero() {
 
       <div className="hero-content">
         <img
-  src="/assets/legacy-crest.png"
-  alt="Legacy Auto Detailing Crest"
-  style={{
-    width: "220px",
-    maxWidth: "220px",
-    height: "auto",
-    display: "block",
-    marginBottom: "20px",
-  }}
-/>
-        <p className="hero-eyebrow">PREMIUM AUTOMOTIVE CARE</p>
+          src="/assets/legacy-crest.png"
+          alt="Legacy Auto Detailing Crest"
+          style={{
+            width: "220px",
+            maxWidth: "220px",
+            height: "auto",
+            display: "block",
+            marginBottom: "20px",
+          }}
+        />
+
+        <p className="hero-eyebrow">
+          PREMIUM AUTOMOTIVE CARE • AIRCRAFT DETAILING COMING SOON
+        </p>
 
         <h1 className="hero-title">
           Preserve the Finish.
@@ -23,19 +26,20 @@ export default function Hero() {
         </h1>
 
         <p className="hero-description">
-          Professional auto detailing focused on premium results, meticulous
-          workmanship, and long-lasting protection for your vehicle.
+          Premium automotive detailing with aircraft appearance care coming
+          soon. Built around meticulous workmanship, exceptional presentation,
+          and long-lasting protection.
         </p>
 
         <div className="hero-buttons">
           <a
-  href="https://app.squareup.com/appointments/book/na91kgmns7xlpf/L2D8MGPVDVC20/start"
-  target="_blank"
-  rel="noopener noreferrer"
-  className="hero-primary-button"
->
-  Book Your Detail
-</a>
+            href="https://app.squareup.com/appointments/book/na91kgmns7xlpf/L2D8MGPVDVC20/start"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="hero-primary-button"
+          >
+            Book Automotive Detail
+          </a>
 
           <a href="#services" className="hero-secondary-button">
             View Services

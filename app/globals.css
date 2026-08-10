@@ -1641,3 +1641,13 @@ section {
   text-justify: none !important;
   word-spacing: normal !important;
 }
+/* Fix stretched word spacing in Our Promise and Footer */
+.promise-content p,
+.footer-brand p,
+.footer-bottom p {
+  text-align: center !important;
+  text-align-last: auto !important;
+  word-spacing: normal !important;
+  letter-spacing: normal !important;
+  white-space: normal !important;
+}

@@ -78,6 +78,29 @@ export default function Services() {
               Book Signature
             </a>
           </article>
+          <article className="service-card">
+            <p className="service-number">04</p>
+            <h3>Aircraft Detailing</h3>
+            <div className="membership-tier">COMING SOON</div>
+
+            <p>
+              Premium aircraft appearance care designed to preserve the finish,
+              presentation, and legacy of your aircraft. This service is
+              currently being developed with aircraft-specific products,
+              procedures, training, and protection standards.
+            </p>
+
+            <ul className="membership-features">
+              <li>Exterior aircraft detailing</li>
+              <li>Interior cabin detailing</li>
+              <li>Paint polishing and protection</li>
+              <li>Customized aircraft care plans</li>
+            </ul>
+
+            <a href="#contact" className="service-link">
+              Join the Interest List
+            </a>
+          </article>
         </div>
 
         <div className="discount-banner">
